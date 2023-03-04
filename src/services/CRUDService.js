@@ -78,8 +78,7 @@ let updateUserData = (data) => {
     return new Promise(async (resolve, reject) => {
         try {
             let user = await db.User.findOne({
-                where: { id: data.id },
-
+                where: { id: data.id }
             })
             if (user) {
                 user.firstName = data.firstName;
